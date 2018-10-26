@@ -12,6 +12,8 @@
 		ACA6D50D2182E087004E6F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA6D50B2182E087004E6F23 /* Main.storyboard */; };
 		ACA6D50F2182E088004E6F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA6D50E2182E088004E6F23 /* Assets.xcassets */; };
 		ACA6D5122182E088004E6F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA6D5102182E088004E6F23 /* LaunchScreen.storyboard */; };
+		ACA6D51C2182E2E5004E6F23 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA6D51B2182E2E5004E6F23 /* GameScene.swift */; };
+		ACA6D51E21834906004E6F23 /* coin01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACA6D51D21834906004E6F23 /* coin01.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		ACA6D50E2182E088004E6F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA6D5112182E088004E6F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA6D5132182E088004E6F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA6D51B2182E2E5004E6F23 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		ACA6D51D21834906004E6F23 /* coin01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin01.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		ACA6D5062182E087004E6F23 /* FlappyBird */ = {
 			isa = PBXGroup;
 			children = (
+				ACA6D51D21834906004E6F23 /* coin01.mp3 */,
 				ACA6D5072182E087004E6F23 /* AppDelegate.swift */,
 				ACA6D5092182E087004E6F23 /* ViewController.swift */,
 				ACA6D50B2182E087004E6F23 /* Main.storyboard */,
 				ACA6D50E2182E088004E6F23 /* Assets.xcassets */,
 				ACA6D5102182E088004E6F23 /* LaunchScreen.storyboard */,
 				ACA6D5132182E088004E6F23 /* Info.plist */,
+				ACA6D51B2182E2E5004E6F23 /* GameScene.swift */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				ACA6D5122182E088004E6F23 /* LaunchScreen.storyboard in Resources */,
 				ACA6D50F2182E088004E6F23 /* Assets.xcassets in Resources */,
+				ACA6D51E21834906004E6F23 /* coin01.mp3 in Resources */,
 				ACA6D50D2182E087004E6F23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA6D51C2182E2E5004E6F23 /* GameScene.swift in Sources */,
 				ACA6D50A2182E087004E6F23 /* ViewController.swift in Sources */,
 				ACA6D5082182E087004E6F23 /* AppDelegate.swift in Sources */,
 			);
