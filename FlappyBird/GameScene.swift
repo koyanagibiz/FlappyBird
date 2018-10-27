@@ -15,7 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var wallNode:SKNode!    // 追加
     var itemNode:SKNode!
     var bird:SKSpriteNode!
-    var item:SKNode!
+    var item:SKSpriteNode!
     
     
     
@@ -428,14 +428,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 userDefaults.synchronize()
             } // --- ここまで追加---
             
-        } else if(contact.bodyA.categoryBitMask & itemCategory) == itemCategory {
+        } else if(contact.bodyA.categoryBitMask & itemCategory) == itemCategory || (contact.bodyB.categoryBitMask & itemCategory) == itemCategory {
             print("GotItem!")
             itemscore += 1
             itemscoreLabelNode.text = "ItemScore:\(itemscore)"
            
-            if let child = itemNode.childNode(withName: "itemobject") {
-                child.removeFromParent()
-                }
+            contact.bodyA.node?.removeFromParent()
+            contact.bodyB.node?.xScale = 1.5
+            
+            
             
             let mySoundAction: SKAction = SKAction.playSoundFileNamed("coin01.mp3", waitForCompletion: true)
             // 再生アクション
@@ -443,7 +444,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("SE:played")
             
         }
-        else {
+        
+        else{
+            
+            if (bird.xScale == 1.5){
+                contact.bodyB.node?.xScale = 1}
+            else
+            if(bird.xScale == 1){
             // 壁か地面と衝突した
             print("GameOver")
             
@@ -457,8 +464,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.bird.speed = 0
                 
             })
-            
+            }
         }
+        
     }
     
     
